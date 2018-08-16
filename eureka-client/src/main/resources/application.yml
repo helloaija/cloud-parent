@@ -7,4 +7,4 @@ server:
   port: 8821
 spring:
   application:
-    name: eurekaClient
+    name: eureka-client

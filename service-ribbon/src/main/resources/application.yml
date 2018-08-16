@@ -7,5 +7,5 @@ server:
 
 spring:
   application:
-    name: serviceRebbon
+    name: service-ribbon
 

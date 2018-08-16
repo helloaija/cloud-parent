@@ -14,7 +14,7 @@ public class HelloServiceImpl implements HelloService {
 
     @HystrixCommand(fallbackMethod = "helloPortError")
     public String helloPort() {
-        return restTemplate.getForObject("http://EUREKACLIENT/hello/helloPort", String.class);
+        return restTemplate.getForObject("http://EUREKA-CLIENT/hello/helloPort", String.class);
     }
 
     public String helloPortError() {
