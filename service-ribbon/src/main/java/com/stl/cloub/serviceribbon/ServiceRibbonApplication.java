@@ -1,4 +1,4 @@
-package com.stl.cloub.servicerebbon;
+package com.stl.cloub.serviceribbon;
 
 import com.netflix.hystrix.contrib.metrics.eventstream.HystrixMetricsStreamServlet;
 import org.springframework.boot.SpringApplication;
@@ -15,10 +15,10 @@ import org.springframework.web.client.RestTemplate;
 @EnableHystrixDashboard
 @EnableDiscoveryClient
 @SpringBootApplication
-public class ServiceRebbonApplication {
+public class ServiceRibbonApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ServiceRebbonApplication.class, args);
+        SpringApplication.run(ServiceRibbonApplication.class, args);
     }
 
     @Bean
