@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(value="/hello")
+@RequestMapping(value = "/hello")
 public class HelloController {
 
     @Autowired
@@ -18,12 +18,12 @@ public class HelloController {
     @Value("${message.title}")
     private String messageTitle;
 
-    @RequestMapping(value="/helloPort")
+    @RequestMapping(value = "/helloPort")
     public String helloPort() {
         return helloService.helloPort();
     }
 
-    @RequestMapping(value="/helloConfig")
+    @RequestMapping(value = "/helloConfig")
     public String helloConfig() {
         return configTest + messageTitle;
     }
