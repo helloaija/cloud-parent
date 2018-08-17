@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    config:
+      name: client-app, instance-message
+      label: master
+      profile: dev
+      uri: http://localhost:8851/
+#      discovery:
+#        enabled: true # 启用发现服务功能
+#        serviceId: config-server # 指定服务名称

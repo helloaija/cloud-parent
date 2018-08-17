@@ -13,15 +13,18 @@ public class HelloController {
     @Autowired
     private HelloService helloService;
 
-    @Value("${configTest}")
+    @Value("${configtest}")
     private String configTest;
+    @Value("${message.title}")
+    private String messageTitle;
 
     @RequestMapping(value="/helloPort")
     public String helloPort() {
         return helloService.helloPort();
     }
 
+    @RequestMapping(value="/helloConfig")
     public String helloConfig() {
-        return configTest;
+        return configTest + messageTitle;
     }
 }
