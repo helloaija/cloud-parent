@@ -3,16 +3,11 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8811/eureka/
 
-server:
-  port: 8832
-
 feign:
   hystrix:
     enabled: true
 
 spring:
-  application:
-    name: service-feign
   cloud:
     config:
       name: client-app, instance-message
@@ -21,3 +16,4 @@ spring:
       discovery:
         enabled: true # 启用发现服务功能
         serviceId: config-server # 指定服务名称
+

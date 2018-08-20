@@ -10,6 +10,10 @@ spring:
           searchPaths: /config-resp
           username:
           password:
+    bus:
+      trace:
+        enabled: true
+      enabled: true
 
 server:
   port: 8851
@@ -19,3 +23,8 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8811/eureka/
 
+management:
+  endpoint:
+    web:
+      exposure:
+        include: bus-refresh
