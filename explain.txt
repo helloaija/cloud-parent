@@ -1,0 +1,2 @@
+rabbitMq访问地址
+http://localhost:15672
