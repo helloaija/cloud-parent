@@ -9,6 +9,7 @@ spring:
       enabled: true
       trace:
         enabled: true
+  # 配置rabbitMq
   rabbitmq:
     host: localhost
     port: 5672
@@ -24,9 +25,13 @@ spring:
   zipkin:
     baseUrl: http://localhost:9411/
     enabled: true
+  #引入其他配置文件，例如application-db.yml
+  profiles:
+    include: db
 
 management:
   endpoints:
     web:
       exposure:
         include: bus-refresh
+
