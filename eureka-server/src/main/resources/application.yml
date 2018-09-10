@@ -32,6 +32,9 @@ eureka:
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://eureka-server-2:8812/eureka/,http://eureka-server-3:8813/eureka/
+  server:
+    #关闭自我保护模式，90秒没有收到心跳连接就移除服务
+    enable-self-preservation: false
 
 ---
 
