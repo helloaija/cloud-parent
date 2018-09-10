@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/spring-cloud?useUnicode=true&characterEncoding=utf8&characterSetResult=utf8
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      #建表create，更新数据update
+      ddl-auto: update
+    #打印sql
+    show-sql: true
+
