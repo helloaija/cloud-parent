@@ -1,7 +1,6 @@
 package com.stl.cloud.servicefeign.service;
 
-import com.netflix.discovery.converters.Auto;
-import com.stl.cloud.servicefeign.UserDao;
+import com.stl.cloud.servicefeign.dao.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

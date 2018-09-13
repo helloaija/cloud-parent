@@ -1,4 +1,4 @@
-package com.stl.cloud.servicefeign;
+package com.stl.cloud.servicefeign.dao;
 
 import com.stl.cloud.servicefeign.entity.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
