@@ -12,6 +12,9 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
+import java.util.Objects;
 
 @Configuration
 @EnableWebSecurity
@@ -25,8 +28,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         //         .logout().logoutUrl("/logout").logoutSuccessUrl("/").and()
         //         // 所有请求都需要安全验证
         //         .authorizeRequests().anyRequest().authenticated()
-        //         .and().csrf().disable();
-        super.configure(http);
+        //         .and().csrf().disable()
+        //         .httpBasic();
     }
 
     @Override
@@ -39,6 +42,21 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public static BCryptPasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
+
+    // @Bean
+    // public PasswordEncoder passwordEncoder() {
+    //     return new PasswordEncoder() {
+    //         @Override
+    //         public String encode(CharSequence charSequence) {
+    //             return charSequence.toString();
+    //         }
+    //
+    //         @Override
+    //         public boolean matches(CharSequence charSequence, String s) {
+    //             return Objects.equals(charSequence.toString(), s);
+    //         }
+    //     };
+    // }
 
     @Bean
     @Override
