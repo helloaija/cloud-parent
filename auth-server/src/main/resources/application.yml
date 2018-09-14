@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: auth-server
+  profiles:
+    include: db
+server:
+  port: 8861
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8811/eureka/
+
+
